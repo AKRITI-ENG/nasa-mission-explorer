@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA Mission Explorer</title>
+    <meta name="description" content="Explore space through NASA's Astronomy Picture of the Day (APOD)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="background-animation"></div>
+    
+    <div class="app-container">
+        <header class="glass-panel">
+            <h1>NASA Mission Explorer</h1>
+            <p>Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured.</p>
+            
+            <form id="search-form" class="search-form">
+                <div class="input-group">
+                    <label for="date-input">Select Date</label>
+                    <input type="date" id="date-input" required aria-label="Select Date">
+                </div>
+                <button type="submit" class="btn-primary">Explore</button>
+            </form>
+        </header>
+
+        <main id="content-container">
+            <div id="loading-state" class="state-container hidden">
+                <div class="spinner"></div>
+                <p>Establishing connection with NASA...</p>
+            </div>
+
+            <div id="error-state" class="state-container hidden">
+                <div class="error-icon">⚠️</div>
+                <p id="error-message">Oops! Something went wrong.</p>
+            </div>
+
+            <article id="apod-card" class="glass-panel apod-card hidden">
+                <div class="media-container">
+                    <img id="apod-image" src="" alt="Astronomy Picture of the Day" class="hidden">
+                    <iframe id="apod-video" src="" frameborder="0" allowfullscreen class="hidden" title="Astronomy Video of the Day"></iframe>
+                </div>
+                <div class="info-container">
+                    <h2 id="apod-title"></h2>
+                    <div class="badges">
+                        <span id="apod-date" class="badge"></span>
+                        <span id="apod-copyright" class="badge hidden"></span>
+                    </div>
+                    <p id="apod-description"></p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
