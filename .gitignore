@@ -1,0 +1,3 @@
+# Ignore configuration files containing API keys
+config.js
+.env
