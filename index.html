@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,24 @@
     <meta name="description" content="Explore space through NASA's Astronomy Picture of the Day (APOD)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <div class="background-animation"></div>
-    
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+        <span id="theme-icon">☀️</span>
+        <span id="theme-label">Light Mode</span>
+    </button>
+
     <div class="app-container">
+
         <header class="glass-panel">
             <h1>NASA Mission Explorer</h1>
             <p>Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured.</p>
-            
+
             <form id="search-form" class="search-form">
                 <div class="input-group">
                     <label for="date-input">Select Date</label>
@@ -49,11 +55,52 @@
                     <div class="badges">
                         <span id="apod-date" class="badge"></span>
                         <span id="apod-copyright" class="badge hidden"></span>
+                        <button id="fav-btn" class="btn-fav" aria-label="Save to favourites">
+                            ♡ Save
+                        </button>
                     </div>
                     <p id="apod-description"></p>
                 </div>
             </article>
         </main>
+
+        <section class="glass-panel favourites-section">
+
+            <div class="favourites-header">
+                <h2 class="section-title">❤ Saved APODs</h2>
+                <span id="fav-count" class="fav-count">0 saved</span>
+            </div>
+
+            <div class="fav-controls">
+                <input
+                    type="text"
+                    id="fav-search"
+                    placeholder="Search by keyword..."
+                    class="fav-search-input"
+                    aria-label="Search saved APODs"
+                />
+
+                <select id="fav-filter" class="fav-select" aria-label="Filter by type">
+                    <option value="all">All Types</option>
+                    <option value="image">Images Only</option>
+                    <option value="video">Videos Only</option>
+                </select>
+
+                <select id="fav-sort" class="fav-select" aria-label="Sort favourites">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="az">Title A → Z</option>
+                    <option value="za">Title Z → A</option>
+                </select>
+
+                <button id="clear-favs-btn" class="btn-clear">Clear All</button>
+            </div>
+
+            <div id="fav-grid" class="fav-grid"></div>
+            <p id="fav-empty" class="fav-empty hidden">No saved APODs match your search.</p>
+
+        </section>
+
     </div>
 
     <script src="config.js"></script>
