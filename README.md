@@ -25,7 +25,7 @@ The goal of this project is to demonstrate:
 
 ---
 
-## ✨ Planned Features
+## ✨ Features
 
 ### 🔍 Core Features
 
@@ -34,7 +34,7 @@ The goal of this project is to demonstrate:
 * ⏳ Loading indicator while fetching data
 * ❌ Error handling for invalid dates or API issues
 
-### ⚙️ Advanced Features (Milestone 3)
+### ⚙️ Advanced Features
 
 * 🔎 Search functionality
 * 🎯 Filter saved/favorite images
@@ -67,7 +67,7 @@ nasa-mission-explorer/
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/nasa-mission-explorer.git
+git clone https://github.com/AKRITI-ENG/nasa-mission-explorer.git
 
 ### 2️⃣ Navigate to the folder
 
@@ -82,9 +82,9 @@ Open `index.html` in your browser
 ## 📅 Milestone Progress
 
 * ✅ Milestone 1: Project setup and planning
-* ⏳ Milestone 2: API integration
-* ⏳ Milestone 3: Core features implementation
-* ⏳ Milestone 4: Deployment and final submission
+* ✅ Milestone 2: API integration
+* ✅ Milestone 3: Core & Advanced features implementation
+* ✅ Milestone 4: Deployment and final submission
 
 ---
 
